@@ -40,7 +40,7 @@ Topics:
   - title: "UI and Process Improvements"
     image: "pso/pso_improvements.png"
     link: "/capstone/pso-website/"
-    alt: "Poway Symphony Orchestra - UI and Process Improvement Plan"
+    alt: "Poway Symphony Orchestra"
     keyPoints:
       - "No upcoming concert card above the fold with date and buy tickets button"
       - "Ticket purchase redirects off-site with no warning or context"
