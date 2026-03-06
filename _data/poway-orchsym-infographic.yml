@@ -51,7 +51,6 @@ Topics:
     subtitle: "Where the Site Falls Short and How to Fix It"
     description: "The homepage tries to serve three audiences simultaneously with no prioritization, so none of the three messages land as effectively as they should. The most urgent fix is surfacing a Next Concert card above the fold with a date and direct ticket link. Ticket flow currently sends users off-site without context, which increases abandonment. The donate banner blends into the navigation with no visual hierarchy. Musician recruitment content belongs on a dedicated Musicians page rather than the homepage. Social links should be replaced with small clean icons. A platform migration from Google Sites to Squarespace, Wix, or WordPress would resolve most of these issues structurally."
     tech:
-      - "Recommended: Squarespace or WordPress"
       - "Inline Email Capture Form"
       - "Next Concert Hero Card"
       - "Direct Ticket Deep-Link"
