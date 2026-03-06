@@ -2,7 +2,7 @@
 toc: false
 layout: post
 title: Poway Symphony Orchestra 
-description: A Design-Based Research capstone building a multi-layer automated data loss prevention system for Flask/Aurora — protecting against data corruption, enabling fast recovery, and helping operators make confident decisions under pressure.
+description: A UI and process analysis of the Poway Symphony Orchestra website examining how the site communicates credibility, community identity, and audience invitations across three competing user groups: concertgoers, donors, and prospective musicians.
 permalink: /capstone/pso-website/
 sticky_rank: 1
 ---
