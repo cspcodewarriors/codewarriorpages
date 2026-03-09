@@ -1,67 +1,70 @@
 {% assign data = site.data.poway-orchsym-infographic %}
 
-<div class="dd-infograph">
-  <!-- Header Section -->
-  <div class="dd-header">
-    <div class="dd-badge">Design-Based Research Capstone</div>
-    <h1 class="dd-title">{{ data.Title }}</h1>
-    <p class="dd-description">{{ data.Description }}</p>
+<div class="sip-infograph">
+  <!-- Header -->
+  <div class="sip-header">
+    {% if data.HeaderImage %}
+    <div class="sip-header-image-wrap">
+      <img src="{{ site.baseurl }}/images/{{ data.HeaderImage }}" alt="{{ data.Title }}" class="sip-header-image">
+    </div>
+    {% endif %}
+    <div class="sip-badge">Nonprofit Site Analysis</div>
+    <h1 class="sip-title">{{ data.Title }}</h1>
+    <p class="sip-description">{{ data.Description }}</p>
   </div>
 
-  <!-- Project Cards -->
+  <!-- Cards -->
   {% for topic in data.Topics %}
-  <div class="dd-card">
-    <div class="dd-card-grid">
+  <div class="sip-card">
+    <div class="sip-card-grid">
 
       <!-- Left: Image & Status -->
-      <div class="dd-visual">
-        <a href="{{ site.baseurl }}{{ topic.link }}" class="dd-image-link">
-          <img src="{{ site.baseurl }}/images/{{ topic.image }}" alt="{{ topic.alt }}" class="dd-image">
-          <div class="dd-overlay">
-            <span>View Project</span>
-          </div>
+      <div class="sip-visual">
+        <a href="{{ topic.link }}" class="sip-image-link" target="_blank" rel="noopener">
+          <img src="{{ site.baseurl }}/images/{{ topic.image }}" alt="{{ topic.alt }}" class="sip-image">
+          <div class="sip-overlay"><span>Visit Site</span></div>
         </a>
-        <div class="dd-status">{{ topic.status }}</div>
-        <div class="dd-team">
-          <span class="dd-team-label">Project Leads</span>
-          <span class="dd-team-name">{{ topic.team | join: ", " }}</span>
+        <div class="sip-status">{{ topic.status }}</div>
+        <div class="sip-team">
+          <span class="sip-team-label">Team</span>
+          <span class="sip-team-name">{{ topic.team | join: " · " }}</span>
         </div>
       </div>
 
-      <!-- Center: Key Points -->
-      <div class="dd-content">
-        <h2 class="dd-project-title">{{ topic.title }}</h2>
-        <p class="dd-subtitle">{{ topic.subtitle }}</p>
+      <!-- Center: Key Points & Tags -->
+      <div class="sip-content">
+        <h2 class="sip-project-title">{{ topic.title }}</h2>
+        <p class="sip-subtitle">{{ topic.subtitle }}</p>
 
-        <div class="dd-keypoints">
+        <div class="sip-keypoints">
           {% for point in topic.keyPoints %}
-          <div class="dd-keypoint">
-            <span class="dd-check">✓</span>
+          <div class="sip-keypoint">
+            <span class="sip-check">✓</span>
             <span>{{ point }}</span>
           </div>
           {% endfor %}
         </div>
 
-        <div class="dd-tech-stack">
+        <div class="sip-tech-stack">
           {% for tech in topic.tech %}
-          <span class="dd-tech-tag">{{ tech }}</span>
+          <span class="sip-tech-tag">{{ tech }}</span>
           {% endfor %}
         </div>
       </div>
 
-      <!-- Right: Description & Impact -->
-      <div class="dd-details">
-        <h3 class="dd-section-title">About</h3>
-        <p class="dd-about">{{ topic.description }}</p>
+      <!-- Right: About & Impact -->
+      <div class="sip-details">
+        <h3 class="sip-section-title">About</h3>
+        <p class="sip-about">{{ topic.description }}</p>
 
-        <h3 class="dd-section-title">Impact</h3>
-        <div class="dd-impact-list">
+        <h3 class="sip-section-title">Impact</h3>
+        <div class="sip-impact-list">
           {% for item in topic.impact %}
-          <div class="dd-impact-item">{{ item }}</div>
+          <div class="sip-impact-item">{{ item }}</div>
           {% endfor %}
         </div>
 
-        <a href="{{ site.baseurl }}{{ topic.link }}" class="dd-btn">Learn More</a>
+        <a href="{{ topic.link }}" class="sip-btn" target="_blank" rel="noopener">Visit Site</a>
       </div>
 
     </div>
